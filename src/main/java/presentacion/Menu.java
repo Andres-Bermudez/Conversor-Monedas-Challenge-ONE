@@ -1,5 +1,7 @@
 package presentacion;
 
+import conexionapi.ConexionHttp;
+import lecturaarchivos.LecturaArchivos;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -28,7 +30,7 @@ public class Menu {
                     menuConvertirValor();
                     break;
                 case 2:
-                    verUltimaConsulta();
+                    LecturaArchivos.verUltimaConsulta();
                     break;
                 default:
                     System.out.println("\n>>> Recuerda elegir solo entre las opciones disponibles <<<");
@@ -53,6 +55,7 @@ public class Menu {
             int eleccionUsuario = sc.nextInt();
 
             if (eleccionUsuario == 0) {
+                System.out.println("\nFin del programa.");
                 System.exit(0);
             } else if (eleccionUsuario == 1) {
                 convertirValor();
@@ -73,7 +76,7 @@ public class Menu {
             System.out.print("Escribe el codigo de la moneda que vas a convertir: ");
             String codigoMonedaOrigen = sc.nextLine().toUpperCase();
 
-            System.out.print("\t\tIngresa el valor a convertir: ");
+            System.out.print(">>>>>> Ingresa el valor a convertir: ");
             float valorAConvertir = sc.nextFloat();
             sc.nextLine();
 
@@ -81,20 +84,20 @@ public class Menu {
             String codigoMonedaDestino = sc.nextLine().toUpperCase();
 
             System.out.println("\nEjecutando conversion.....");
-            // Pendiente por llamar a la API
+
+            // Solicitud GET a la API para hacer la conversion
+            ConexionHttp.solicitudGET(codigoMonedaOrigen, codigoMonedaDestino);
 
         } catch (InputMismatchException e) {
             System.out.println("\n>>> Los datos que ingresaste no son validos <<<");
         }
     }
 
-    private static void verUltimaConsulta() {
-
-    }
-
     private static void verCodigosMonedas() {
         String monedas = """
-                         \n"USD": "Dólar estadounidense",              "AED": "Dírham de los Emiratos Árabes Unidos",   "AFN": "Afgani afgano",
+                         \nCODIGOS DE MONEDAS POR PAIS:
+                         **********************************************************************************************************************************************
+                         "USD": "Dólar estadounidense",              "AED": "Dírham de los Emiratos Árabes Unidos",   "AFN": "Afgani afgano",
                          "ALL": "Lek albanés",                       "AMD": "Dram armenio",                           "ANG": "Florín antillano neerlandés",
                          "AOA": "Kwanza angoleño",                   "ARS": "Peso argentino",                         "AUD": "Dólar australiano",
                          "AWG": "Florín arubeño",                    "AZN": "Manat azerbaiyano",                      "BAM": "Marco convertible de Bosnia-Herzegovina",
@@ -148,7 +151,9 @@ public class Menu {
                          "XAF": "Franco CFA BEAC",                   "XCD": "Dólar del Caribe Oriental",              "XDR": "Derechos Especiales de Giro",
                          "XOF": "Franco CFA BCEAO",                  "XPF": "Franco CFP",                             "YER": "Rial yemení",
                          "ZAR": "Rand sudafricano",                  "ZMW": "Kwacha zambiano",                        "ZWL": "Dólar zimbabuense"
+                         **********************************************************************************************************************************************
                          """;
         System.out.println(monedas);
+        menuConvertirValor();
     }
 }

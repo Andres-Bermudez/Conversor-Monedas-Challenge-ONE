@@ -1,0 +1,9 @@
+
+**********************************************************************************
+La conversion de (USD) a (COP) es: 
+                                               
+Resultado Conversion: 4191.0932
+Moneda Origen: USD
+Moneda Destino: COP
+Ultima Actualizacion: Sun, 06 Oct 2024 00:00:01 +0000
+Fuente resultado: https://www.exchangerate-api.com/docs
