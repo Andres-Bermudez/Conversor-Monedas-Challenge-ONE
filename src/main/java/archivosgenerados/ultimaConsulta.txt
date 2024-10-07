@@ -1,9 +1,8 @@
 
-**********************************************************************************
-La conversion de (USD) a (COP) es: 
-                                               
-Resultado Conversion: 4191.0932
-Moneda Origen: USD
-Moneda Destino: COP
-Ultima Actualizacion: Sun, 06 Oct 2024 00:00:01 +0000
-Fuente resultado: https://www.exchangerate-api.com/docs
+******************************************************************************
+Conversion de (USD) a (COP)
+RESULTADO DE LA CONVERSION: La cantidad de 50000.0 (USD) equivale a: 209264995 (COP)
+ 
+RESULTADO DE LA CONSULTA:
+Ultima Actualizacion: Mon, 07 Oct 2024 00:00:01 +0000
+Fuente de los datos obtenidos: https://www.exchangerate-api.com/docs

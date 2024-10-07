@@ -1,4 +1,6 @@
 # Conversor de monedas 🤑
+
+![Conversor en ejecucion](./imagenes/conversion.png)
 ## Primer Challenge de la especialización en Backend del programa ONE. 🧑‍🎓
 
 ### 📝 Objetivos: 

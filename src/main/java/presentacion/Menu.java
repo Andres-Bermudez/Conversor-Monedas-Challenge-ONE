@@ -76,8 +76,8 @@ public class Menu {
             System.out.print("Escribe el codigo de la moneda que vas a convertir: ");
             String codigoMonedaOrigen = sc.nextLine().toUpperCase();
 
-            System.out.print(">>>>>> Ingresa el valor a convertir: ");
-            float valorAConvertir = sc.nextFloat();
+            System.out.print("Ingresa la cantidad a convertir: $");
+            double valorAConvertir = sc.nextFloat();
             sc.nextLine();
 
             System.out.print("Escribe el codigo de la moneda en que lo quieres convertir: ");
@@ -86,7 +86,7 @@ public class Menu {
             System.out.println("\nEjecutando conversion.....");
 
             // Solicitud GET a la API para hacer la conversion
-            ConexionHttp.solicitudGET(codigoMonedaOrigen, codigoMonedaDestino);
+            ConexionHttp.solicitudGET(valorAConvertir, codigoMonedaOrigen, codigoMonedaDestino);
 
         } catch (InputMismatchException e) {
             System.out.println("\n>>> Los datos que ingresaste no son validos <<<");
