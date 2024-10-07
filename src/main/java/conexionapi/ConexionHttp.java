@@ -32,29 +32,32 @@ public class ConexionHttp extends CredencialesAPI {
             if (response.isSuccessful()) {
                 String json = response.body().string();
 
-                // Formatear la respuesta JSON
+                // Formatear la respuesta JSON a un objeto Java
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
                 RespuestaConversionMonedas monedaConvertida = gson.fromJson(json,
                                                             RespuestaConversionMonedas.class);
-
                 // Imprimir la respuesta.
                 // Formatear la conversion a un tipo de dato que lo soporte
                 String valor = String.valueOf(valorAConvertir * monedaConvertida.resultadoConversion());
                 BigDecimal operacionConversion = new BigDecimal(valor);
 
-                String encabezadoResultado = "\n******************************************************************************" +
-                                             "\nConversion de (" + monedaOrigen + ") a" + " (" + monedaDestino + ")";
+                String resultado = "\n*******************************************************************************" +
+                                   "\nConversion de (" + monedaOrigen + ") a" + " (" + monedaDestino + ")" +
+                                   "\nResultado de la conversion: La cantidad de " + valorAConvertir +
+                                   " (" + monedaOrigen + ")" + " equivale a: " + operacionConversion +
+                                   " (" + monedaDestino + ")" +
+                                   "\n   " +
+                                   "\nEstado de la consulta: " +
+                                   "\nUltima actualizacion: " + monedaConvertida.ultimaActualizacion() +
+                                   "\nFuente Consultada: " + monedaConvertida.fuente();
+                System.out.println(resultado);
 
-                String resultado = "\nRESULTADO DE LA CONVERSION: La cantidad de " + valorAConvertir + " (" + monedaOrigen + ")" +
-                                   " equivale a: " + operacionConversion + " (" + monedaDestino + ")";
+                // Generar un archivo .txt que almacene las consultas realizadas.
+                File file = new File("src/main/java/archivosgenerados/consultasRealizadas.txt");
 
-                System.out.println(encabezadoResultado + resultado + monedaConvertida);
-
-                // Generar un archivo .txt que almacene la ultima consulta.
-                File file = new File("src/main/java/archivosgenerados/ultimaConsulta.txt");
-                // Escribir el archivo en la ruta especificada
-                FileWriter writer = new FileWriter(file);
-                writer.write(encabezadoResultado + resultado + monedaConvertida);
+                // Añadir la consulta a el archivo en la ruta especificada
+                FileWriter writer = new FileWriter(file, true);
+                writer.write(resultado + "\n");
                 writer.close();
             } else {
                 System.out.println("\nNo fue posible realizar la conversion.");

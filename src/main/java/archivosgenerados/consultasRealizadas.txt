@@ -1,0 +1,24 @@
+
+*******************************************************************************
+Conversion de (COP) a (USD)
+Resultado de la conversion: La cantidad de 350000.0 (COP) equivale a: 83.6255 (USD)
+   
+Estado de la consulta: 
+Ultima actualizacion: Mon, 07 Oct 2024 00:00:01 +0000
+Fuente Consultada: https://www.exchangerate-api.com/docs
+
+*******************************************************************************
+Conversion de (COP) a (MXN)
+Resultado de la conversion: La cantidad de 600000.0 (COP) equivale a: 2765.4 (MXN)
+   
+Estado de la consulta: 
+Ultima actualizacion: Mon, 07 Oct 2024 00:00:01 +0000
+Fuente Consultada: https://www.exchangerate-api.com/docs
+
+*******************************************************************************
+Conversion de (MXN) a (COP)
+Resultado de la conversion: La cantidad de 959000.0 (MXN) equivale a: 208069818.6 (COP)
+   
+Estado de la consulta: 
+Ultima actualizacion: Mon, 07 Oct 2024 00:00:01 +0000
+Fuente Consultada: https://www.exchangerate-api.com/docs

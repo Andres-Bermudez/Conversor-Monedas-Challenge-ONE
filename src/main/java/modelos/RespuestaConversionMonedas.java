@@ -20,13 +20,6 @@ public record RespuestaConversionMonedas(
         String fuente
 ){
 
-    @Override
-    public String toString() {
-        return "\n " +
-               "\nRESULTADO DE LA CONSULTA:" +
-               "\nUltima Actualizacion: " + ultimaActualizacion() +
-               "\nFuente de los datos obtenidos: " + fuente();
-    }
 }
 
 

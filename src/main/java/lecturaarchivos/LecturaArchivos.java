@@ -8,10 +8,10 @@ public class LecturaArchivos {
 
     public static void verUltimaConsulta() {
         try {
-            File file = new File("src/main/java/archivosgenerados/ultimaConsulta.txt");
+            File file = new File("src/main/java/archivosgenerados/consultasRealizadas.txt");
             Scanner sc = new Scanner(file);
 
-            System.out.println("\nULTIMA CONSULTA REALIZADA:");
+            System.out.println("\nCONSULTAS REALIZADAS:");
             while (sc.hasNextLine()) {
                 String linea = sc.nextLine();
                 System.out.println(linea);
