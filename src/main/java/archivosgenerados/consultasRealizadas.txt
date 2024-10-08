@@ -22,3 +22,19 @@ Resultado de la conversion: La cantidad de 959000.0 (MXN) equivale a: 208069818.
 Estado de la consulta: 
 Ultima actualizacion: Mon, 07 Oct 2024 00:00:01 +0000
 Fuente Consultada: https://www.exchangerate-api.com/docs
+
+*******************************************************************************
+Conversion de (GBP) a (COP)
+Resultado de la conversion: La cantidad de 1.0 (GBP) equivale a: 5499.8348 (COP)
+   
+Estado de la consulta: 
+Ultima actualizacion: Mon, 07 Oct 2024 00:00:01 +0000
+Fuente Consultada: https://www.exchangerate-api.com/docs
+
+*******************************************************************************
+Conversion de (ARS) a (COP)
+Resultado de la conversion: La cantidad de 100000.0 (ARS) equivale a: 429340.0 (COP)
+   
+Estado de la consulta: 
+Ultima actualizacion: Mon, 07 Oct 2024 00:00:01 +0000
+Fuente Consultada: https://www.exchangerate-api.com/docs
