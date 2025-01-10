@@ -8,19 +8,34 @@
   ![Consultas Realizadas](./imagenes/ConsultasRealizadas.png)
 
 ## Descripcion:
-Este es un conversor de monedas desarrollado en Java que utiliza la API de 
-ExchangeRate (https://www.exchangerate-api.com/).
 
-El sistema permite la conversión de monedas mediante pares: primero, el 
-usuario ingresa el código de la moneda de origen y luego el código de la 
-moneda a la que desea convertir el valor introducido. A continuación, se 
-realiza una solicitud a la API, se convierte el valor dentro de la aplicación 
-y se obtiene así el valor convertido a la moneda deseada.
+Este es un conversor de monedas desarrollado en Java que
+utiliza la API de ExchangeRate 🌐 para ofrecer conversiones
+actualizadas y precisas.
 
-La aplicación ofrece la posibilidad de convertir un valor, consultar los 
-códigos de las monedas disponibles y revisar las consultas realizadas, las 
-cuales se almacenan en un archivo con extensión .txt en el directorio de 
-archivos generados.
+🔧 ¿Cómo funciona?
+
+🧑‍💻 El usuario ingresa el código de la moneda de origen.
+
+💰 Luego, introduce el código de la moneda de destino y el valor
+   a convertir.
+
+🔗 La aplicación realiza una solicitud a la API de ExchangeRate.
+
+📊 El valor es convertido y mostrado al usuario de forma clara
+   y sencilla.
+
+📦 Características principales:
+
+✅ Conversión precisa: Convierte valores entre diversas monedas
+   con información actualizada.
+
+✅ Consulta de códigos: Permite consultar los códigos de las 
+  monedas disponibles.
+
+✅ Historial de conversiones: Las conversiones realizadas se
+  almacenan en un archivo .txt ubicado en el directorio de 
+  archivos generados.
 
 - Codigos de monedas para realizar una conversion:
   ![Codigos monedas](./imagenes/CodigosMonedasPais.png)
